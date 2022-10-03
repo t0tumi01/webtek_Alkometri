@@ -8,12 +8,24 @@ export default StyleSheet.create({
         alignItems: 'center',
         paddingTop: Constants.statusBarHeight,
     },
-    appTitle: {
+    heading: {
         fontSize: 40,
-        fontFamily: 'Rubik',
-        fontWeight: 'bold',
+        fontFamily: 'RubikBold',
         color: '#6060EF',
-        paddingTop: 5,
-        paddingBottom: 10,
+        marginTop: 5,
+        marginBottom: 10,
+    },
+    label: {
+        fontSize: 16,
+        fontFamily: 'RubikBold',
+        alignSelf: 'flex-start',
+        marginLeft: 20,
+        marginTop: 20,
+    },
+    input: {
+        width: '85%',
+        height: 40,
+        borderBottomWidth: 1,
+        borderBottomColor: 'gray',
     }
 });

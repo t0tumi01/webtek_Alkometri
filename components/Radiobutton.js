@@ -1,14 +1,14 @@
-import React, {useState} from 'react';
-import { StyleSheet, Text, View, SafeAreaView, Pressable} from 'react-native';
+import {useEffect, useState} from 'react';
+import { StyleSheet, Text, SafeAreaView, Pressable} from 'react-native';
 
 /**
  * Radiobutton component
  * options - Array containing dispayed texts and values for radiobutton options
  * onPress - Used to forward selected value to the component using ths radiobutton component
- */
-
-export default function Radiobutton({options, onPress, defaultValue}) {
-    const [value, setValue] = useState(defaultValue);
+ * defaultValue - Default value
+*/
+export default function Radiobutton({options, onPress, defaultValue = 1}) {
+    const [value, setValue] = useState(null);
 
     /** Relay function for handling radiobutton selection */
     function handlePress(selected) {
@@ -16,6 +16,12 @@ export default function Radiobutton({options, onPress, defaultValue}) {
         onPress(selected);
     }
 
+    /** Set default value when refreshed */
+    useEffect(() => {
+        setValue(defaultValue);
+    }, [])
+
+    /** Return radiobuttons view */
     return (
         <>
         {
@@ -32,23 +38,24 @@ export default function Radiobutton({options, onPress, defaultValue}) {
     )    
 }
 
+/** Stylesheet */
 const styles = StyleSheet.create({
     buttonContainer: {
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'flex-start',
         width: '100%',
-        marginBottom: 10,
+        marginTop: 10,
         paddingLeft: 30,
         paddingRight: 30,
-        marginBottom: 30,
+        marginBottom: 10,
     },
     label: {
         marginRight: 10,
     },
     circle: {
-        height: 28,
-        width: 28,
+        height: 20,
+        width: 20,
         borderRadius: 15,
         borderWidth: 1,
         boarderColor: '#000',
@@ -56,8 +63,8 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
     },
     checkedCircle: {
-        width: 15,
-        height: 15,
+        width: 12,
+        height: 12,
         borderRadius: 7,
         backgroundColor: '#000'
     }
