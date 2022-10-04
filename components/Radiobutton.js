@@ -44,11 +44,10 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'flex-start',
-        width: '100%',
+        width: '80%',
         marginTop: 10,
-        paddingLeft: 30,
-        paddingRight: 30,
         marginBottom: 10,
+        marginLeft: 25,
     },
     label: {
         marginRight: 10,
