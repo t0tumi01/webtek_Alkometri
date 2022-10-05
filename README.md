@@ -1,2 +1,2 @@
-# webtek_Alkometri
+# Alkometri
 Web- ja hybriditeknologiat mobiiliohjelmoinnissa harjoitus
