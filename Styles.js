@@ -51,4 +51,18 @@ export default StyleSheet.create({
         fontFamily: 'RubikBold',
         color: '#FF0000',      
     },
+    errorText: {
+        marginBottom: 5,
+        marginLeft: 25,
+        fontFamily: 'Rubik',
+        color: 'red',
+    },
+    buttonText: {
+        fontSize: 18,
+        color: "#fff",
+        fontWeight: "bold",
+        alignSelf: "center",
+        fontFamily: 'RubikBold',
+        textTransform: "uppercase"
+      }
 });
